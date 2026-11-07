@@ -1,0 +1,21 @@
+TASK 1 - I2C / MPU6050
+
+Montagem:
+ESP32 3V3     -> GY-521 VCC
+ESP32 GND     -> GY-521 GND
+ESP32 GPIO21  -> GY-521 SDA
+ESP32 GPIO22  -> GY-521 SCL
+Motor/cooler  -> DESLIGADO durante este teste
+
+Serial Monitor: 115200 baud
+Endereco esperado: 0x68
+
+Criterio de aprovacao:
+[ ] O scanner encontra 0x68.
+[ ] 0x68 aparece em 10 varreduras consecutivas.
+[ ] Nao ha resets/desconexoes.
+
+Exemplo esperado:
+I2C_SCAN_START
+FOUND,0x68
+I2C_SCAN_END,count=1
